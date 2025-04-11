@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squid Game x DarkLegacy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+</head>
+<body>
+    <audio id="background-music" autoplay loop>
+        <source src="music/1.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+    <button id="toggle-music" class="music-button">
+        🔊
+    </button>
+    <h1>Bienvenidos al Squid Game</h1>
+    <p>Bienvenidos a una nueva experiencia en DarkLegacy</p>
+    
+    <div class="owner-container">
+        <span class="less-fachero">🐺 MahiLobito</span>
+        <span class="owner">OWNER</span>
+    </div>
+    
+    <p>Y los <span class="dev-title">DEV</span>:</p>
+    
+    <div class="dev-container">
+        <div class="fachero">
+            <span>✨ ZineZack</span>
+            <span class="head-manager">Head Manager</span>
+        </div>
+        
+        <div class="fachero">
+            <span>🔥 Kryxuss</span>
+            <span class="head-manager">Head Manager</span>
+        </div>
+    </div>
+    <script>
+        const music = document.getElementById('background-music');
+        const toggleButton = document.getElementById('toggle-music');
+
+        toggleButton.addEventListener('click', () => {
+            if (music.paused) {
+                music.play();
+                toggleButton.textContent = '🔊';
+            } else {
+                music.pause();
+                toggleButton.textContent = '🔇';
+            }
+        });
+    </script>
+</body>
+</html>
