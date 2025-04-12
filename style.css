@@ -1,4 +1,3 @@
-/* Reset de estilos básicos */
 * {
     margin: 0;
     padding: 0;
@@ -21,8 +20,10 @@ body {
     text-align: center;
     background-image: url('image/Imagen1.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -78,8 +79,9 @@ p {
     color: gold;
     text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     font-size: 1.4em;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.2);
@@ -92,11 +94,17 @@ p {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
+.fachero span:not(.head-manager) {
+    margin-top: 5px;
+}
+
 .less-fachero {
     font-size: 1.8em;
     color: #e0e0e0;
     text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.2);
     margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .owner {
@@ -108,6 +116,9 @@ p {
     border: 2px solid #ff4757;
     letter-spacing: 1px;
     font-size: 1.1em;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .head-manager {
@@ -118,6 +129,7 @@ p {
     font-weight: bold;
     font-size: 0.8em;
     border: 1px solid #a55eea;
+    margin-top: 5px;
 }
 
 .music-button {
@@ -145,7 +157,6 @@ p {
     transform: scale(1.1);
 }
 
-/* Animations */
 @keyframes titleAnimation {
     0% {
         filter: hue-rotate(0deg);
@@ -167,5 +178,85 @@ p {
     }
     100% {
         transform: scale(1);
+    }
+}
+
+.face-icon {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    margin-right: 8px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.owner-container .less-fachero {
+    margin-right: 5px;
+}
+
+.owner-container .face-icon {
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+
+    .owner-container, .dev-container {
+        padding: 12px;
+        width: 90%;
+    }
+
+    .fachero {
+        font-size: 1.2em;
+    }
+
+    .less-fachero {
+        font-size: 1.5em;
+    }
+
+    .face-icon {
+        width: 28px;
+        height: 28px;
+        margin-right: 5px;
+    }
+
+    .music-button {
+        width: 40px;
+        height: 40px;
+        top: 10px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .dev-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .face-icon {
+        width: 24px;
+        height: 24px;
     }
 }
