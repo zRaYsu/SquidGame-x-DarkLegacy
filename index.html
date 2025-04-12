@@ -36,18 +36,83 @@
             <span class="head-manager">Head Manager</span>
         </div>
     </div>
-    <script>
-        const music = document.getElementById('background-music');
-        const toggleButton = document.getElementById('toggle-music');
 
-        toggleButton.addEventListener('click', () => {
-            if (music.paused) {
-                music.play();
-                toggleButton.textContent = '🔊';
-            } else {
-                music.pause();
-                toggleButton.textContent = '🔇';
+    <p><span class="partner-title">PARTNER</span>:</p>
+    
+    <div class="partner-container">
+        <div class="partner-item">
+            <img src="image/face (3).png" alt="Gooxa Records face" class="face-icon"> <span>Gooxa Records</span>
+        </div>
+    </div>
+
+    <div id="kryxuss-modal" class="squid-game-modal">
+        <div class="squid-game-modal-content">
+            <span class="close-button">&times;</span>
+            <div class="squid-symbols">
+                <div class="symbol circle"></div>
+                <div class="symbol triangle"></div>
+                <div class="symbol square"></div>
+            </div>
+            <h2 class="squid-title">KRYXUSS</h2>
+            <div class="info-container">
+                <div class="info-item">
+                    <div class="info-label">Nombre:</div>
+                    <div class="info-value">Kryxuss</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Info:</div>
+                    <div class="info-value">En principio me dedico a mejorar DarkLegacyMC. El servidor de MahiLobito, nos mata mucho para hacer las cosas bien pero se logra. Es una muy buena persona. Lo que estamos haciendo ahora mismo lo del Squid Game va a ser una locura para pagar 3,60€ por la entrada no esta nada mal por el esfuerzo que le esta metiendo el Owner para esto. Pronto nuevas modalidades y DarkLegacy se volverá un servidor muy bueno.</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Edad:</div>
+                    <div class="info-value">16</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Status:</div>
+                    <div class="info-value status-online">Online</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const music = document.getElementById('background-music');
+            const toggleButton = document.getElementById('toggle-music');
+
+            toggleButton.addEventListener('click', () => {
+                if (music.paused) {
+                    music.play();
+                    toggleButton.textContent = '🔊';
+                } else {
+                    music.pause();
+                    toggleButton.textContent = '🔇';
+                }
+            });
+
+            const kryxussElement = document.querySelector('.dev-container .fachero:nth-child(2) span:not(.head-manager)');
+            if (kryxussElement) {
+                kryxussElement.classList.add('kryxuss-trigger');
+                kryxussElement.addEventListener('click', function() {
+                    const modal = document.getElementById('kryxuss-modal');
+                    modal.style.display = 'block';
+                });
             }
+
+            const closeButton = document.querySelector('.close-button');
+            if (closeButton) {
+                closeButton.addEventListener('click', function() {
+                    const modal = document.getElementById('kryxuss-modal');
+                    modal.style.display = 'none';
+                });
+            }
+
+            window.addEventListener('click', function(event) {
+                const modal = document.getElementById('kryxuss-modal');
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
         });
     </script>
 </body>
