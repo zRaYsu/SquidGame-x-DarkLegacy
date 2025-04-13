@@ -124,11 +124,11 @@
                 </div>
                 <div class="info-item">
                     <div class="info-label">Info:</div>
-                    <div class="info-value">NOT SET</div>
+                    <div class="info-value">Viejo Sabio</div>
                 </div>
                 <div class="info-item">
                     <div class="info-label">Edad:</div>
-                    <div class="info-value">NOT SET</div>
+                    <div class="info-value">24</div>
                 </div>
                 <div class="info-item">
                     <div class="info-label">Status:</div>
@@ -184,7 +184,6 @@
                 }
             });
 
-            // Setup modal triggers for all characters
             const modalTriggerConfig = [
                 { trigger: '.mahilobito-trigger', modal: 'mahilobito-modal' },
                 { trigger: '.kryxuss-trigger', modal: 'kryxuss-modal' },
@@ -201,7 +200,6 @@
                 }
             });
 
-            // Close modal functionality
             const closeButtons = document.querySelectorAll('.close-button');
             closeButtons.forEach(button => {
                 button.addEventListener('click', function() {
@@ -210,7 +208,6 @@
                 });
             });
 
-            // Close modal when clicking outside
             window.addEventListener('click', function(event) {
                 const modals = document.querySelectorAll('.squid-game-modal');
                 modals.forEach(modal => {
@@ -220,7 +217,6 @@
                 });
             });
 
-            // Add hover effect class to all character names
             document.querySelectorAll('.mahilobito-trigger, .kryxuss-trigger, .zinezack-trigger, .gooxa-trigger').forEach(el => {
                 el.classList.add('character-trigger');
             });
