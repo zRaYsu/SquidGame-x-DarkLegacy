@@ -19,7 +19,7 @@
     <p>Bienvenidos a una nueva experiencia en DarkLegacyMC</p>
 
     <div class="owner-container">
-        <img src="image/face (2).png" alt="MahiLobito face" class="face-icon"> <span class="less-fachero">MahiLobito</span>
+        <img src="image/face (2).png" alt="MahiLobito face" class="face-icon"> <span class="less-fachero mahilobito-trigger">MahiLobito</span>
         <span class="owner">OWNER</span>
     </div>
 
@@ -27,12 +27,12 @@
 
     <div class="dev-container">
         <div class="fachero">
-            <img src="image/face.png" alt="ZineZack face" class="face-icon"> <span>ZineZack</span>
+            <img src="image/face.png" alt="ZineZack face" class="face-icon"> <span class="zinezack-trigger">ZineZack</span>
             <span class="head-manager">Head Manager</span>
         </div>
 
         <div class="fachero">
-            <img src="image/face (1).png" alt="Kryxuss face" class="face-icon"> <span>Kryxuss</span>
+            <img src="image/face (1).png" alt="Kryxuss face" class="face-icon"> <span class="kryxuss-trigger">Kryxuss</span>
             <span class="head-manager">Head Manager</span>
         </div>
     </div>
@@ -41,12 +41,13 @@
     
     <div class="partner-container">
         <div class="partner-item">
-            <img src="image/face (3).png" alt="Gooxa Records face" class="face-icon"> <span>Gooxa Records</span>
+            <img src="image/face (3).png" alt="Gooxa Records face" class="face-icon"> <span class="gooxa-trigger">Gooxa Records</span>
         </div>
     </div>
 
+    <!-- Kryxuss Modal -->
     <div id="kryxuss-modal" class="squid-game-modal">
-        <div class="squid-game-modal-content">
+        <div class="squid-game-modal-content kryxuss-theme">
             <span class="close-button">&times;</span>
             <div class="squid-symbols">
                 <div class="symbol circle"></div>
@@ -75,6 +76,99 @@
         </div>
     </div>
 
+    <!-- MahiLobito Modal -->
+    <div id="mahilobito-modal" class="squid-game-modal">
+        <div class="squid-game-modal-content mahilobito-theme">
+            <span class="close-button">&times;</span>
+            <div class="squid-symbols">
+                <div class="symbol star"></div>
+                <div class="symbol hexagon"></div>
+                <div class="symbol diamond"></div>
+            </div>
+            <h2 class="squid-title">MAHILOBITO</h2>
+            <div class="info-container">
+                <div class="info-item">
+                    <div class="info-label">Nombre:</div>
+                    <div class="info-value">MahiLobito</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Info:</div>
+                    <div class="info-value">NOT SET</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Edad:</div>
+                    <div class="info-value">NOT SET</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Status:</div>
+                    <div class="info-value status-online">Online</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ZineZack Modal -->
+    <div id="zinezack-modal" class="squid-game-modal">
+        <div class="squid-game-modal-content zinezack-theme">
+            <span class="close-button">&times;</span>
+            <div class="squid-symbols">
+                <div class="symbol circle-alt"></div>
+                <div class="symbol polygon"></div>
+                <div class="symbol rect"></div>
+            </div>
+            <h2 class="squid-title">ZINEZACK</h2>
+            <div class="info-container">
+                <div class="info-item">
+                    <div class="info-label">Nombre:</div>
+                    <div class="info-value">ZineZack</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Info:</div>
+                    <div class="info-value">NOT SET</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Edad:</div>
+                    <div class="info-value">NOT SET</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Status:</div>
+                    <div class="info-value status-online">Online</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gooxa Records Modal -->
+    <div id="gooxa-modal" class="squid-game-modal">
+        <div class="squid-game-modal-content gooxa-theme">
+            <span class="close-button">&times;</span>
+            <div class="squid-symbols">
+                <div class="symbol music-note"></div>
+                <div class="symbol wave"></div>
+                <div class="symbol disc"></div>
+            </div>
+            <h2 class="squid-title">GOOXA RECORDS</h2>
+            <div class="info-container">
+                <div class="info-item">
+                    <div class="info-label">Nombre:</div>
+                    <div class="info-value">Gooxa Records</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Info:</div>
+                    <div class="info-value">NOT SET</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Edad:</div>
+                    <div class="info-value">NOT SET</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Status:</div>
+                    <div class="info-value status-online">Online</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const music = document.getElementById('background-music');
@@ -90,28 +184,45 @@
                 }
             });
 
-            const kryxussElement = document.querySelector('.dev-container .fachero:nth-child(2) span:not(.head-manager)');
-            if (kryxussElement) {
-                kryxussElement.classList.add('kryxuss-trigger');
-                kryxussElement.addEventListener('click', function() {
-                    const modal = document.getElementById('kryxuss-modal');
-                    modal.style.display = 'block';
-                });
-            }
-
-            const closeButton = document.querySelector('.close-button');
-            if (closeButton) {
-                closeButton.addEventListener('click', function() {
-                    const modal = document.getElementById('kryxuss-modal');
-                    modal.style.display = 'none';
-                });
-            }
-
-            window.addEventListener('click', function(event) {
-                const modal = document.getElementById('kryxuss-modal');
-                if (event.target === modal) {
-                    modal.style.display = 'none';
+            // Setup modal triggers for all characters
+            const modalTriggerConfig = [
+                { trigger: '.mahilobito-trigger', modal: 'mahilobito-modal' },
+                { trigger: '.kryxuss-trigger', modal: 'kryxuss-modal' },
+                { trigger: '.zinezack-trigger', modal: 'zinezack-modal' },
+                { trigger: '.gooxa-trigger', modal: 'gooxa-modal' }
+            ];
+            
+            modalTriggerConfig.forEach(config => {
+                const triggerElement = document.querySelector(config.trigger);
+                if (triggerElement) {
+                    triggerElement.addEventListener('click', function() {
+                        document.getElementById(config.modal).style.display = 'block';
+                    });
                 }
+            });
+
+            // Close modal functionality
+            const closeButtons = document.querySelectorAll('.close-button');
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const modal = button.closest('.squid-game-modal');
+                    modal.style.display = 'none';
+                });
+            });
+
+            // Close modal when clicking outside
+            window.addEventListener('click', function(event) {
+                const modals = document.querySelectorAll('.squid-game-modal');
+                modals.forEach(modal => {
+                    if (event.target === modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            });
+
+            // Add hover effect class to all character names
+            document.querySelectorAll('.mahilobito-trigger, .kryxuss-trigger, .zinezack-trigger, .gooxa-trigger').forEach(el => {
+                el.classList.add('character-trigger');
             });
         });
     </script>
