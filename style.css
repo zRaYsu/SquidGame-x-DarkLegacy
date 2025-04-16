@@ -412,6 +412,7 @@ p {
     display: flex;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 15px;
+    justify-content: space-between;
     padding: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transform: translateX(-100%);
@@ -419,6 +420,7 @@ p {
     animation-delay: calc(var(--item-index, 0) * 0.2s);
     transition: all 0.3s ease;
     border-left: 4px solid var(--squid-pink);
+    align-items: center;
 }
 
 .mahilobito-theme .info-item {
@@ -448,6 +450,7 @@ p {
     font-weight: bold;
     color: var(--squid-green);
     font-size: 1.2em;
+    text-align: left;
 }
 
 .info-value {
@@ -455,6 +458,10 @@ p {
     color: var(--squid-light);
     line-height: 1.7;
     font-size: 1.05em;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .status-online {
@@ -463,6 +470,7 @@ p {
     position: relative;
     display: inline-flex;
     align-items: center;
+    margin-left: auto;
 }
 
 .status-online::before {
