@@ -12,8 +12,7 @@
     --squid-blue: #48dbfb;
     --squid-dark: #1e272e;
     --squid-light: #f5f6fa;
-    
-    /* New theme colors */
+
     --mahilobito-primary: #ff6b6b;
     --mahilobito-secondary: #ff9ff3;
     --zinezack-primary: #48dbfb;
@@ -235,7 +234,6 @@ p {
     margin-right: 5px;
 }
 
-/* Improved Modal styles */
 .squid-game-modal {
     display: none;
     position: fixed;
@@ -264,7 +262,6 @@ p {
     overflow: hidden;
 }
 
-/* Theme-specific styles for each character */
 .mahilobito-theme {
     border-color: var(--mahilobito-primary);
     box-shadow: 0 0 30px rgba(255, 107, 107, 0.5), inset 0 0 20px rgba(255, 107, 107, 0.2);
@@ -275,8 +272,8 @@ p {
 
 .mahilobito-theme .squid-title {
     color: var(--mahilobito-primary);
-    text-shadow: 0 0 10px var(--mahilobito-primary), 
-                 0 0 20px var(--mahilobito-primary), 
+    text-shadow: 0 0 10px var(--mahilobito-primary),
+                 0 0 20px var(--mahilobito-primary),
                  0 0 30px var(--mahilobito-primary);
 }
 
@@ -290,8 +287,8 @@ p {
 
 .zinezack-theme .squid-title {
     color: var(--zinezack-primary);
-    text-shadow: 0 0 10px var(--zinezack-primary), 
-                 0 0 20px var(--zinezack-primary), 
+    text-shadow: 0 0 10px var(--zinezack-primary),
+                 0 0 20px var(--zinezack-primary),
                  0 0 30px var(--zinezack-primary);
 }
 
@@ -305,8 +302,8 @@ p {
 
 .gooxa-theme .squid-title {
     color: var(--gooxa-primary);
-    text-shadow: 0 0 10px var(--gooxa-primary), 
-                 0 0 20px var(--gooxa-primary), 
+    text-shadow: 0 0 10px var(--gooxa-primary),
+                 0 0 20px var(--gooxa-primary),
                  0 0 30px var(--gooxa-primary);
 }
 
@@ -326,7 +323,6 @@ p {
     animation: neonPulseGooxa 2s infinite alternate;
 }
 
-/* Theme-specific info styling */
 .mahilobito-theme .info-label {
     color: var(--mahilobito-secondary);
 }
@@ -381,8 +377,8 @@ p {
     text-align: center;
     margin-bottom: 30px;
     color: var(--squid-pink);
-    text-shadow: 0 0 10px var(--squid-pink), 
-                 0 0 20px var(--squid-pink), 
+    text-shadow: 0 0 10px var(--squid-pink),
+                 0 0 20px var(--squid-pink),
                  0 0 30px var(--squid-pink);
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 5px;
@@ -481,7 +477,6 @@ p {
     box-shadow: 0 0 10px var(--squid-green);
 }
 
-/* Enhanced Symbol Styles */
 .squid-symbols {
     position: absolute;
     top: 0;
@@ -512,7 +507,6 @@ p {
     border-color: var(--gooxa-primary);
 }
 
-/* Original Squid Game Symbols */
 .circle {
     width: 100px;
     height: 100px;
@@ -553,7 +547,6 @@ p {
     animation: rotate 30s linear infinite, float 9s ease-in-out infinite;
 }
 
-/* MahiLobito Themed Symbols */
 .star {
     width: 0;
     height: 0;
@@ -641,7 +634,6 @@ p {
     animation: rotate 15s linear infinite, float 8s ease-in-out infinite;
 }
 
-/* ZineZack Themed Symbols */
 .circle-alt {
     width: 90px;
     height: 90px;
@@ -674,7 +666,6 @@ p {
     border: 3px solid var(--zinezack-primary);
 }
 
-/* Gooxa Records Themed Symbols */
 .music-note {
     width: 40px;
     height: 60px;
@@ -755,7 +746,6 @@ p {
     transform: translate(-50%, -50%);
 }
 
-/* Character Click Triggers */
 .character-trigger {
     cursor: pointer;
     transition: all 0.3s ease;
@@ -803,7 +793,6 @@ p {
     text-shadow: 0 0 5px #ffd700;
 }
 
-/* Enhanced Animations */
 @keyframes neonPulseKryxuss {
     from {
         text-shadow: 0 0 10px var(--squid-pink),
@@ -903,11 +892,11 @@ p {
 }
 
 @keyframes modalAppear {
-    0% { 
+    0% {
         transform: scale(0.7);
         opacity: 0;
     }
-    100% { 
+    100% {
         transform: scale(1);
         opacity: 1;
     }
@@ -973,29 +962,29 @@ p {
         font-size: 1.2em;
         padding: 12px 20px;
     }
-    
+
     .squid-game-modal-content {
         width: 95%;
         padding: 25px;
         margin: 10% auto;
     }
-    
+
     .squid-title {
         font-size: 2.5em;
     }
-    
+
     .info-item {
         flex-direction: column;
     }
-    
+
     .info-label {
         margin-bottom: 8px;
     }
-    
+
     .symbol {
         transform: scale(0.7);
     }
-    
+
     .star, .hexagon, .diamond, .circle-alt, .polygon, .rect, .music-note, .wave, .disc {
         transform: scale(0.7);
     }
@@ -1028,15 +1017,15 @@ p {
         width: 24px;
         height: 24px;
     }
-    
+
     .squid-title {
         font-size: 2em;
     }
-    
+
     .info-container {
         gap: 15px;
     }
-    
+
     .symbol, .star, .hexagon, .diamond, .circle-alt, .polygon, .rect, .music-note, .wave, .disc {
         transform: scale(0.5);
     }
