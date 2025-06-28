@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squid Game x Minecraft | DarkLegacy</title>
+    <meta name="description" content="Experimenta el Juego del Calamar en Minecraft como nunca antes. Una experiencia única en DarkLegacyMC con desafíos mortales y grandes premios.">
+    <link rel="icon" type="image/jpeg" href="assets/images/favicon.jpeg">
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Reproductor de música de fondo -->
+    <audio id="background-music" loop>
+        <source src="assets/audio/1.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+    
+    <!-- Botón de control de música -->
+    <button class="music-button" aria-label="Controlar música">
+        🔊
+    </button>
+    
+    <!-- Fondo con efecto parallax -->
+    <div class="bg-parallax"></div>
+    <div class="bg-overlay"></div>
+    
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <img src="assets/images/favicon.jpeg" alt="Logo Squid Game Minecraft">
+                <span>SQUID GAME</span>
+            </div>
+            <button class="navbar-toggle" aria-label="Menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="navbar-links">
+                <a href="#inicio" class="navbar-link">Inicio</a>
+                <a href="#juego" class="navbar-link">El Juego</a>
+                <a href="#equipo" class="navbar-link">Equipo</a>
+                <a href="#galeria" class="navbar-link">Galería</a>
+                <a href="#unete" class="navbar-link">Únete</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Sección Hero -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title animate-on-scroll">SQUID GAME</h1>
+            <p class="hero-subtitle animate-on-scroll">Bienvenidos a una nueva experiencia en DarkLegacyMC</p>
+            <div id="typewriter" class="hero-quote animate-on-scroll"></div>
+            <div class="hero-buttons">
+                <a href="#juego" class="btn btn-primary animate-on-scroll">Descubrir</a>
+                <a href="#unete" class="btn btn-secondary animate-on-scroll">Únete Ahora</a>
+            </div>
+        </div>
+        
+        <!-- Símbolos del Juego del Calamar -->
+        <div class="squid-symbols">
+            <div class="symbol circle"></div>
+            <div class="symbol triangle"></div>
+            <div class="symbol square"></div>
+        </div>
+        
+        <!-- Canvas para partículas -->
+        <canvas id="particles-canvas"></canvas>
+    </section>
+    
+    <!-- Sección de características del juego -->
+    <section id="juego" class="features">
+        <div class="container">
+            <h2 class="features-title animate-on-scroll">EL JUEGO DEL CALAMAR</h2>
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-skull"></i>
+                    </div>
+                    <h3 class="feature-title">Desafíos Mortales</h3>
+                    <p class="feature-description">Participa en juegos inspirados en la serie, donde cada movimiento puede ser el último. Supera pruebas de habilidad, estrategia y nervios de acero.</p>
+                </div>
+                
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3 class="feature-title">Grandes Premios</h3>
+                    <p class="feature-description">Compite por un premio de 3,60€ por entrada. ¡Demuestra tu valía y llévate el botín mientras los demás caen!</p>
+                </div>
+                
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="feature-title">Experiencia Multijugador</h3>
+                    <p class="feature-description">Forma alianzas o traiciona a tus compañeros. En el Juego del Calamar, solo uno puede sobrevivir y llevarse todo.</p>
+                </div>
+                
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <h3 class="feature-title">Escenarios Detallados</h3>
+                    <p class="feature-description">Mapas recreados con precisión en Minecraft, capturando la esencia y la tensión de la serie original.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sección de citas -->
+    <section class="quotes">
+        <div class="container">
+            <h2 class="quotes-title animate-on-scroll">FRASES ICÓNICAS</h2>
+            <div class="quotes-slider">
+                <div class="quote-item">
+                    <p class="quote-text">"El juego es justo. Todos tenemos la misma oportunidad de ganar."</p>
+                    <p class="quote-author">Front Man</p>
+                </div>
+                
+                <div class="quote-item">
+                    <p class="quote-text">"Luz roja... Luz verde..."</p>
+                    <p class="quote-author">Muñeca</p>
+                </div>
+                
+                <div class="quote-item">
+                    <p class="quote-text">"Aquí todos somos iguales. Vivimos como caballos con anteojeras. Solo miramos hacia adelante."</p>
+                    <p class="quote-author">Jugador 001</p>
+                </div>
+                
+                <div class="quote-item">
+                    <p class="quote-text">"No confíes en nadie. Aquí todos son enemigos."</p>
+                    <p class="quote-author">Jugador 067</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sección de equipo -->
+    <section id="equipo" class="team">
+        <div class="container">
+            <h2 class="team-title animate-on-scroll">NUESTRO EQUIPO</h2>
+            
+            <div class="team-banner-image">
+                <img src="assets/images/team/team_banner.png" alt="Squid Game Minecraft Team" class="full-width-image">
+            </div>
+            
+            <!-- Owner -->
+            <div class="team-card owner animate-on-scroll">
+                <div class="team-banner owner">
+                    <div class="team-banner-overlay">OWNER</div>
+                </div>
+                <img src="assets/images/face (2).png" alt="MahiLobito" class="team-avatar">
+                <div class="team-content">
+                    <h3 class="team-name mahilobito-trigger">MahiLobito</h3>
+                    <span class="team-role owner">OWNER</span>
+                    <p class="team-info">Creador y visionario detrás de DarkLegacyMC. Su dedicación ha hecho posible traer la experiencia del Juego del Calamar a Minecraft.</p>
+                    <div class="team-status">
+                        <span class="status-indicator"></span>
+                        Online
+                    </div>
+                    <button class="btn btn-primary team-btn mahilobito-trigger">Ver Perfil</button>
+                </div>
+            </div>
+            
+            <h3 class="team-section-title animate-on-scroll">DEVELOPERS</h3>
+            
+            <div class="team-grid">
+                <!-- Developers -->
+                <div class="team-card dev animate-on-scroll">
+                    <div class="team-banner dev">
+                        <div class="team-banner-overlay">DEV</div>
+                    </div>
+                    <img src="assets/images/face.png" alt="ZineZack" class="team-avatar">
+                    <div class="team-content">
+                        <h3 class="team-name zinezack-trigger">ZineZack</h3>
+                        <span class="team-role dev">HEAD MANAGER</span>
+                        <p class="team-info">Viejo Sabio. Experto en desarrollo y gestión de servidores Minecraft.</p>
+                        <div class="team-status">
+                            <span class="status-indicator"></span>
+                            Online
+                        </div>
+                        <button class="btn btn-primary team-btn zinezack-trigger">Ver Perfil</button>
+                    </div>
+                </div>
+                
+                <div class="team-card dev animate-on-scroll">
+                    <div class="team-banner dev">
+                        <div class="team-banner-overlay">DEV</div>
+                    </div>
+                    <img src="assets/images/face (1).png" alt="Kryxuss" class="team-avatar">
+                    <div class="team-content">
+                        <h3 class="team-name kryxuss-trigger">Kryxuss</h3>
+                        <span class="team-role dev">HEAD MANAGER</span>
+                        <p class="team-info">Dedicado a mejorar DarkLegacyMC. Trabaja incansablemente para ofrecer la mejor experiencia.</p>
+                        <div class="team-status">
+                            <span class="status-indicator"></span>
+                            Online
+                        </div>
+                        <button class="btn btn-primary team-btn kryxuss-trigger">Ver Perfil</button>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="team-section-title animate-on-scroll">PARTNERS</h3>
+            
+            <div class="team-grid">
+                <!-- Partner -->
+                <div class="team-card partner animate-on-scroll">
+                    <div class="team-banner partner">
+                        <div class="team-banner-overlay">PARTNER</div>
+                    </div>
+                    <img src="assets/images/face (3).png" alt="Gooxa Records" class="team-avatar">
+                    <div class="team-content">
+                        <h3 class="team-name gooxa-trigger">Gooxa Records</h3>
+                        <span class="team-role partner">PARTNER</span>
+                        <p class="team-info">Colaborador oficial de DarkLegacyMC. Aporta su talento y recursos para mejorar la experiencia del servidor.</p>
+                        <div class="team-status">
+                            <span class="status-indicator"></span>
+                            Online
+                        </div>
+                        <button class="btn btn-primary team-btn gooxa-trigger">Ver Perfil</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sección de galería -->
+    <section id="galeria" class="gallery">
+        <div class="container">
+            <h2 class="gallery-title animate-on-scroll">GALERÍA</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item animate-on-scroll">
+                    <img src="assets/images/Imagen1.jpg" alt="Juego del Calamar - Escena 1" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <p class="gallery-caption">La icónica sala de los símbolos</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item animate-on-scroll">
+                    <img src="assets/images/Imagen2.jpg" alt="Juego del Calamar - Escena 2" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <p class="gallery-caption">Jugador eliminado tras fallar la prueba</p>
+                    </div>
+                </div>
+                
+                <!-- Más imágenes se añadirán dinámicamente -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sección de llamada a la acción -->
+    <section id="unete" class="cta">
+        <div class="container">
+            <h2 class="cta-title animate-on-scroll">ÚNETE AL JUEGO</h2>
+            <p class="cta-text animate-on-scroll">Por solo 3,60€ de entrada, podrás participar en esta experiencia única y luchar por llevarte todo el premio. ¿Tienes lo que hace falta para sobrevivir?</p>
+            
+            <div id="countdown" class="countdown animate-on-scroll"></div>
+            
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary animate-on-scroll">Registrarme Ahora</a>
+                <a href="#" class="btn btn-secondary animate-on-scroll">Más Información</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <img src="assets/images/favicon.jpeg" alt="Logo Squid Game Minecraft">
+                    <span>SQUID GAME</span>
+                </div>
+                <p>Una experiencia única en DarkLegacyMC. Inspirado en la famosa serie, adaptado al mundo de Minecraft.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-discord"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#juego">El Juego</a></li>
+                    <li><a href="#equipo">Equipo</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#unete">Únete</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><a href="#">Discord</a></li>
+                    <li><a href="#">Soporte</a></li>
+                    <li><a href="#">Reportar Bug</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 DarkLegacyMC - Squid Game. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <!-- Modales para el equipo -->
+    <!-- Modal MahiLobito -->
+    <div id="mahilobito-modal" class="modal">
+        <div class="modal-content mahilobito-theme">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title">MAHILOBITO</h2>
+                <p class="modal-subtitle">OWNER</p>
+            </div>
+            <div class="modal-body">
+                <div class="info-container">
+                    <div class="info-item">
+                        <div class="info-label">Nombre:</div>
+                        <div class="info-value">MahiLobito</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Info:</div>
+                        <div class="info-value">Creador y visionario detrás de DarkLegacyMC. Su dedicación ha hecho posible traer la experiencia del Juego del Calamar a Minecraft.</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Status:</div>
+                        <div class="info-value status-online">Online</div>
+                    </div>
+                </div>
+            </div>
+            <div class="squid-symbols">
+                <div class="symbol star"></div>
+                <div class="symbol hexagon"></div>
+                <div class="symbol diamond"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal ZineZack -->
+    <div id="zinezack-modal" class="modal">
+        <div class="modal-content zinezack-theme">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title">ZINEZACK</h2>
+                <p class="modal-subtitle">HEAD MANAGER</p>
+            </div>
+            <div class="modal-body">
+                <div class="info-container">
+                    <div class="info-item">
+                        <div class="info-label">Nombre:</div>
+                        <div class="info-value">ZineZack</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Info:</div>
+                        <div class="info-value">Viejo Sabio</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Edad:</div>
+                        <div class="info-value">24</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Status:</div>
+                        <div class="info-value status-online">Online</div>
+                    </div>
+                </div>
+            </div>
+            <div class="squid-symbols">
+                <div class="symbol circle-alt"></div>
+                <div class="symbol polygon"></div>
+                <div class="symbol rect"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Kryxuss -->
+    <div id="kryxuss-modal" class="modal">
+        <div class="modal-content kryxuss-theme">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title">KRYXUSS</h2>
+                <p class="modal-subtitle">HEAD MANAGER</p>
+            </div>
+            <div class="modal-body">
+                <div class="info-container">
+                    <div class="info-item">
+                        <div class="info-label">Nombre:</div>
+                        <div class="info-value">Kryxuss</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Info:</div>
+                        <div class="info-value">En principio me dedico a mejorar DarkLegacyMC. El servidor de MahiLobito, nos mata mucho para hacer las cosas bien pero se logra. Es una muy buena persona. Lo que estamos haciendo ahora mismo lo del Squid Game va a ser una locura para pagar 3,60€ por la entrada no esta nada mal por el esfuerzo que le esta metiendo el Owner para esto. Pronto nuevas modalidades y DarkLegacy se volverá un servidor muy bueno.</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Edad:</div>
+                        <div class="info-value">16</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Status:</div>
+                        <div class="info-value status-online">Online</div>
+                    </div>
+                </div>
+            </div>
+            <div class="squid-symbols">
+                <div class="symbol circle"></div>
+                <div class="symbol triangle"></div>
+                <div class="symbol square"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Gooxa -->
+    <div id="gooxa-modal" class="modal">
+        <div class="modal-content gooxa-theme">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title">GOOXA RECORDS</h2>
+                <p class="modal-subtitle">PARTNER</p>
+            </div>
+            <div class="modal-body">
+                <div class="info-container">
+                    <div class="info-item">
+                        <div class="info-label">Nombre:</div>
+                        <div class="info-value">Gooxa Records</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Info:</div>
+                        <div class="info-value">Colaborador oficial de DarkLegacyMC. Aporta su talento y recursos para mejorar la experiencia del servidor.</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Status:</div>
+                        <div class="info-value status-online">Online</div>
+                    </div>
+                </div>
+            </div>
+            <div class="squid-symbols">
+                <div class="symbol music-note"></div>
+                <div class="symbol star"></div>
+                <div class="symbol hexagon"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Inicializar contador regresivo
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fecha objetivo: 1 mes desde hoy
+            const targetDate = new Date();
+            targetDate.setMonth(targetDate.getMonth() + 1);
+            
+            initCountdown(targetDate.toISOString().split('T')[0], 'countdown');
+            
+            // Inicializar efecto de máquina de escribir
+            initTypewriter('typewriter', [
+                "¿Te atreves a jugar?",
+                "Solo uno sobrevivirá...",
+                "Luz roja... Luz verde...",
+                "456 jugadores, un solo ganador",
+                "El tiempo se acaba..."
+            ], 100);
+        });
+    </script>
+</body>
+</html>
